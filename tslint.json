@@ -14,7 +14,7 @@
     "eofline": true,
     "forin": true,
     "import-blacklist": [
-      true,
+      false,
       "rxjs",
       "rxjs/Rx"
     ],
@@ -80,9 +80,9 @@
       "check-else",
       "check-whitespace"
     ],
-    "prefer-const": true,
+    "prefer-const": false,
     "quotemark": [
-      true,
+      false,
       "single"
     ],
     "radix": true,
