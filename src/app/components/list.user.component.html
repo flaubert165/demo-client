@@ -8,12 +8,14 @@
       <td>name</td>
       <td>email</td>
       <td></td>
+      <td></td>
     </tr>
     <tr *ngFor="let user of users" align="center">
       <td>{{user.id}}</td>
       <td>{{user.name}} </td>
       <td>{{user.email}} </td>
       <td><a href="" (click)="delete(user.id)">Delete</a></td>
+      <td><a href="" [routerLink]="['/update', user.id]">Update</a></td>
     </tr>
   </table>
 </div>

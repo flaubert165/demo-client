@@ -15,7 +15,7 @@ export class UserService {
   }
 
   getById(id: string) {
-    return this.http.get(environment.serverUrl + '/user/' + id, this.jwt()).map((response: Response) => response.json());
+    return this.http.get(environment.serverUrl + '/user/' + id.toString(), this.jwt()).map((response: Response) => response.json());
   }
 
   create(user: User) {
@@ -36,7 +36,7 @@ export class UserService {
     // create authorization header with jwt token
     let currentUser = JSON.parse(localStorage.getItem('currentUser'));
     if (currentUser && currentUser.access_token) {
-      let headers = new Headers({'Content-type': 'application/x-www-form-urlencoded; charset=utf-8', 'Authorization': 'Bearer ' + currentUser.access_token });
+      let headers = new Headers({/*'Content-type': 'application/x-www-form-urlencoded; charset=utf-8',*/ 'Authorization': 'Bearer ' + currentUser.access_token });
       return new RequestOptions({ headers: headers });
     }
   }

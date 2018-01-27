@@ -15,6 +15,7 @@ import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
 import {routing} from "./app.routing";
 import {ListUserComponent} from "./components/list.user.component";
+import {InfoUserComponent} from "./components/info.user.component";
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {ListUserComponent} from "./components/list.user.component";
     HomeComponent,
     AlertComponent,
     RegisterUserComponent,
-    ListUserComponent
+    ListUserComponent,
+    InfoUserComponent
   ],
   imports: [
     BrowserModule,
