@@ -22,8 +22,10 @@ export class InfoUserComponent implements OnInit {
 
     ngOnInit() {
       let id = this.route.snapshot.paramMap.get('id');
-      this.model = this.route.params.switchMap((params: ParamMap) => this.userService.getById(params.get('id')));
-      console.log(this.model.name);
+      this.userService.getById(id).subscribe( user => {
+        this.model = user;
+        console.log(this.model.name);
+      });
     }
 
     updateUser(): void {
